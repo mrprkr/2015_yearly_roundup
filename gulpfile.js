@@ -59,9 +59,9 @@ gulp.task('build',['index'], function(){
 gulp.task('inject', ['build'], function(){
   gulp.src('./public/index.html')
 
-  	// .pipe(inject(gulp.src(bowerFiles(/*options*/{paths:{bowerDirectory:'./public/src/lib'}}), {read: false}), {relative: true}, {name: 'bower'}))
+  	.pipe(inject(gulp.src(bowerFiles({paths:{bowerDirectory:'./public/src/lib'}}), {read: false}), {name: 'bower', relative: true}))
   	.pipe(inject(es.merge(
-  		gulp.src(bowerFiles(/*options*/{paths:{bowerDirectory:'./public/src/lib'}}), {read: false}), 
+  		// gulp.src(bowerFiles(/*options*/{paths:{bowerDirectory:'./public/src/lib'}}), {read: false}), 
     	gulp.src('./public/src/js/*.js', {read: false}),
     	gulp.src('./public/src/css/*.css', {read: false}) 
 	  ),{relative: true}))
@@ -92,7 +92,7 @@ gulp.task('serve', function(){
 });
 
 //the dafault task
-gulp.task('default', ['inject', 'bower', 'watch', 'serve'], function(){
+gulp.task('default', ['bower', 'inject', 'watch', 'serve'], function(){
 	console.log('Starting gulp...');
 });
 
