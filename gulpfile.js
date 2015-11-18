@@ -8,7 +8,7 @@ var inject = require('gulp-inject');
 var browserSync = require('browser-sync');
 var es = require('event-stream');
 var reload 		= browserSync.reload;
-
+var ghPages		= require('gulp-gh-pages');
 
 
 // move scripts to the js folder in /public
@@ -104,3 +104,8 @@ gulp.task('default', ['bower', 'inject', 'watch', 'serve'], function(){
 });
 
 
+//deploy to github-pages
+gulp.task('deploy', function(){
+	return gulp.src('./public/**/*')
+		.pipe(ghPages());
+});
