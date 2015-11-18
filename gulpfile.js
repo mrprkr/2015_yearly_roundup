@@ -10,8 +10,15 @@ var es = require('event-stream');
 var reload 		= browserSync.reload;
 
 
+
 // move scripts to the js folder in /public
-gulp.task('scripts', function(){
+gulp.task('assets', function(){
+	return gulp.src('./src/assets/*')
+	.pipe(gulp.dest('./public/src/assets'));
+})
+
+// move scripts to the js folder in /public
+gulp.task('scripts',['assets'], function(){
 	return gulp.src('./src/js/**/*.js')
 	.pipe(gulp.dest('./public/src/js'));
 })

@@ -20,11 +20,16 @@
     "bootstrap": "~3.3.5",
     "lazy-line-painter": "~1.7.0",
     "jquery": "~2.1.4",
-    "normalize-css": "~3.0.3"
+    "normalize-css": "~3.0.3",
+    "vivus": "~0.2.3",
+    "isInViewport": "~2.3.0"
   },
   "overrides": {
     "bootstrap": {
-      "main": ["dist/js/bootstrap.js", "dist/css/bootstrap.css"]
+      "main": [
+        "dist/js/bootstrap.js",
+        "dist/css/bootstrap.css"
+      ]
     }
   }
 }
