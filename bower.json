@@ -1,0 +1,25 @@
+{
+  "name": "2015_yearly_roundup",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Parker @ WF"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "lazy-line-painter": "~1.7.0",
+    "jquery": "~2.1.4",
+    "normalize-css": "~3.0.3"
+  }
+}
